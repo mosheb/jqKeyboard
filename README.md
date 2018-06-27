@@ -2,7 +2,7 @@
 
 ---
 
-jQuery-based virtual keyboard. This fork adds left and right arrow keys for caret movement in inut field.
+jQuery-based virtual keyboard. This fork adds left and right arrow keys for caret movement in input field.
 
 **v1.0.1**
 
