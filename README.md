@@ -2,7 +2,7 @@
 
 ---
 
-jQuery-based virtual keyboard.
+jQuery-based virtual keyboard. This fork adds left and right arrow keys for caret movement in inut field.
 
 **v1.0.1**
 
@@ -77,7 +77,7 @@ After we are ready with the initial script file, we can proceed with filling the
 
 As you probably already noticed, the `layout` is an array of strings where each string represents a line, a new row of the keyboard. Each character is separated by space. Special keys are wrapped in `<<KEY_NAME>>`. Currently, these are the available ones:
 
-_\<\<capslock\>\>, \<\<shift\>\>, \<\<tab\>\>, \<\<enter\>\>, \<\<space\>\>, \<\<backspace\>\>_
+_\<\<capslock\>\>, \<\<shift\>\>, \<\<tab\>\>, \<\<enter\>\>, \<\<space\>\>, \<\<backspace\>\>, \<\<left\>\>, \<\<right\>\>_
 
 **Shift and Caps Lock**
 
