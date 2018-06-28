@@ -234,6 +234,14 @@ var jqKeyboard = jqKeyboard || {};
         case 'enter':
           $button.data('val', '\n');
           break;
+        case 'left':
+          $button.data('val', '\u21d0');
+          break;
+        case 'right':
+          $button.data('val', '\u21d2');
+          break;
+          
+          
       }
 
       $button.addClass(SPEC_BTN_CLASS + ' ' + buttonStr).html('&nbsp;');
@@ -401,16 +409,39 @@ var jqKeyboard = jqKeyboard || {};
         .add('.' + SHFT_BTN_CLASS) // Shift-active
         .add('.' + SPEC_BTN_CLASS + '.space')
         .add('.' + SPEC_BTN_CLASS + '.tab')
+        .add('.' + SPEC_BTN_CLASS + '.left')
+        .add('.' + SPEC_BTN_CLASS + '.right')
         .add('.' + SPEC_BTN_CLASS + '.enter')
         .on('click', function () {
           var selectedBtnVal = $(this).data('val');
-
+	
+		if(selectedBtnVal==='\u21d0')
+		{
+          EventManager._onActiveElemTextManipulation(function (selection, currentContent) {
+            return {
+              updatedContent: Helpers.insertCharacter(currentContent, selection, ''),
+              caretOffset: 1
+            };
+          });
+		}
+		else if(selectedBtnVal==='\u21d2')
+		{
+          EventManager._onActiveElemTextManipulation(function (selection, currentContent) {
+            return {
+              updatedContent: Helpers.insertCharacter(currentContent, selection, ''),
+              caretOffset: -1
+            };
+          });
+		}
+		else
+		{
           EventManager._onActiveElemTextManipulation(function (selection, currentContent) {
             return {
               updatedContent: Helpers.insertCharacter(currentContent, selection, selectedBtnVal),
               caretOffset: 1
             };
           });
+        }
 
           if (Core.shift[Core.selectedLanguage]) {
             EventManager._unshift();
