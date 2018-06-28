@@ -6,10 +6,17 @@
   <title>jqKeyboard Demo</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-  <script src="https://raw.githubusercontent.com/hawkgs/jqKeyboard/master/development/build/jqkeyboard.js"></script>
-  <script src="https://raw.githubusercontent.com/hawkgs/jqKeyboard/master/layouts/jqk.layout.en-bg.js"></script>
+  <script src="jqkeyboard.js"></script>
+  <script src="jqk.layout.he.js"></script>
   <style type="text/css">
     /* embed styles (todo problem with external css) */
+
+#jq-keyboard button.jqk-btn.special.left{width:30px;
+background-position:16px 8px;}
+#jq-keyboard button.jqk-btn.special.left:after{content: "\21d0";}
+#jq-keyboard button.jqk-btn.special.right:after{content: "\21d2";}
+#jq-keyboard button.jqk-btn.special.right{width:30px;
+background-position:16px 8px;}
 
     #jq-keyboard {
       position: absolute;
@@ -273,7 +280,7 @@
 
 <body>
   <section id="fields">
-    <input type="text" placeholder="Type something" size="30" /><br/>
+    <input style="direction:rtl" type="text" placeholder="Type something" size="30" /><br/>
     <textarea rows="5" cols="30" placeholder=""></textarea><br/>
     <a href="https://github.com/hawkgs/jqKeyboard">Back to repo</a>
   </section>
