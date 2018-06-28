@@ -8,7 +8,7 @@ jQuery-based virtual keyboard. This fork adds left and right arrow keys for care
 
 ## Demo
 
-[Try it](http://htmlpreview.github.io/?https://raw.githubusercontent.com/hawkgs/jqKeyboard/master/demos/main.html)
+[Try it](http://htmlpreview.github.io/?https://raw.githubusercontent.com/mosheb/jqKeyboard/master/demos/main.html)
 
 ## Installation
 
